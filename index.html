@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+
+    <title>Word Guessing Game</title>
+</head>
+<!-- start game -->
+<body onload = game.startGame()>
+    <audio id="win">
+        <source src="./assets/sounds/Ta Da-SoundBible.com-1884170640.mp3" />
+    </audio>
+
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-3">
+                </div>
+                <div class="col-md-6">
+                    <h1 id="title">Word Guessing Game</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <p id="numofwins" type="win">Win Streak 0</p>
+                </div>
+                <div class="col-md-4">
+                    <p id="match" type="match"></p>
+                </div>
+                <div class="col-md-4">
+                    <p id="numofguess" type="guess">10 guesses left</p>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-4">
+                            <button type="button" id="showanswer">I give up!</button>
+                    </div>
+                    <div class="col-md-4">
+                            <p id="winner" type="winner"></p>
+                    </div>
+                    <div class="col-md-4">
+                            <button type="button" id="reload">New Game</button>
+                    </div>
+            </div>
+
+
+            <p id="used" type="used"> Letters used</p>
+            
+
+            <p id="answer" type="answer"></p><br>
+            <p id="message" type="message"></p><br>
+        </div>
+    </div>
+    <script type="text/javascript" src="./assets/javascript/game.js"></script>
+</body>
+
+</html>
