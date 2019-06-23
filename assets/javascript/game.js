@@ -15,7 +15,9 @@ var game = {
     "duck","drum","happy","sad","child","quick","down","slow","fast","jump",
     "run","walk","fall","tired","bark","yell","bad","good","papa","cool","hot",
     "sorry","quick","book","pen","pencil","wheel","plate","fork","spoon",
-    "down","left","sock","smell","stink","rope","bed","you"],
+    "down","left","sock","smell","stink","rope","bed","you","low","high","sky","pet",
+    "box","room","head","knee","toe","hand","arm","leg","nose","eyes","ears","finger","rain","sun","bug","fly",
+    "frog","lake","ant"],
   //array of allowed keys to press
   alphabet:[  "a","b","c","d","e","f","g","h","i","j",
   "k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],
