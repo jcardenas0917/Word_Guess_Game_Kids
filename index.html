@@ -9,21 +9,20 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
 
-    <title>Word Guessing Game</title>
+    <title>Word Guessing Game Kids!</title>
 </head>
 <!-- start game -->
 <body onload = game.startGame()>
     <audio id="win">
         <source src="./assets/sounds/Ta Da-SoundBible.com-1884170640.mp3" />
     </audio>
-
     <div class="container">
         <div class="jumbotron">
             <div class="row">
                 <div class="col-md-3">
                 </div>
                 <div class="col-md-6">
-                    <h1 id="title">Word Guessing Game</h1>
+                    <h1 id="title">Word Guessing Game Kids!</h1>
                 </div>
             </div>
             <div class="row">
@@ -51,10 +50,9 @@
 
 
             <p id="used" type="used"> Letters used</p>
-            
-
-            <p id="answer" type="answer"></p><br>
-            <p id="message" type="message"></p><br>
+            <p id="answer" type="answer"></p>
+            <p id="message" type="message"></p>
+            <button type="button" id="hint">Show First Letter</button>
         </div>
     </div>
     <script type="text/javascript" src="./assets/javascript/game.js"></script>
