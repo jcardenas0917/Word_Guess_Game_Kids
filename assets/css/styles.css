@@ -35,6 +35,12 @@ min-height: 100vh;
     font-size: 20px;
     color:red;
 }
+#regular{
+    background-color: aquamarine;
+    font-size: 20px;
+    color:red;
+}
+
 #hint{
     background-color: aquamarine;
     font-size: 20px;
