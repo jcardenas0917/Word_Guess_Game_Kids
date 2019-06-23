@@ -26,7 +26,7 @@ var game = {
   lettersUsed: [],
   wSound: document.getElementById("win"),
   hint: [],
-  hintCount:1,
+  hintCount:5,
   startGame: function () {
     // generates a random word form the randon word array
     document.getElementById("message").innerHTML = " ";
@@ -41,7 +41,8 @@ var game = {
     document.getElementById("numofguess").innerHTML = this.guess + " guesses left";
     this.lettersUsed = [];
     document.getElementById("winner").innerHTML = "";
-    this.hintCount = 1;
+    document.getElementById("hint").disabled = false;
+    // document.getElementById("hint").disabled = 'false';
   },
   // Checks for invalid key characters pressed
   lettersAllowed: function (allowed) {
@@ -99,16 +100,20 @@ var game = {
       document.getElementById("numofwins").innerHTML = "Wins " + this.wins;
     }
   },
+  //gives one hint per game until hints are over
   showHint: function(){
-    if (this.hintCount===1){
+    if (this.hintCount!==0){
     this.hint = this.hiddenWord.charAt(0);
-    console.log(this.hint);
-    document.getElementById("message").innerHTML =
+    document.getElementById("match").innerHTML =
         "Try " + this.hint.toLocaleUpperCase();
-    this.hintCount--
-    }else if (this.hintCount===0){
-      document.getElementById("message").innerHTML =
-        "Sorry no more hints :(";
+    this.hintCount--;
+    document.getElementById("hint").disabled = true;
+    document.getElementById("numofhints").innerHTML = this.hintCount +
+        " hints left";
+    console.log(this.hintCount);
+    } else if(this.hintCount===0){
+      document.getElementById("match").innerHTML =
+        "No more hints left";
     }
   }
 };
