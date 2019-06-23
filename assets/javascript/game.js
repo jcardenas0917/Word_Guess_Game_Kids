@@ -24,6 +24,7 @@ var game = {
   lettersUsed: [],
   wSound: document.getElementById("win"),
   hint: [],
+  hintCount:1,
   startGame: function () {
     // generates a random word form the randon word array
     document.getElementById("message").innerHTML = " ";
@@ -37,6 +38,8 @@ var game = {
     this.guess = 10;
     document.getElementById("numofguess").innerHTML = this.guess + " guesses left";
     this.lettersUsed = [];
+    document.getElementById("winner").innerHTML = "";
+    this.hintCount = 1;
   },
   // Checks for invalid key characters pressed
   lettersAllowed: function (allowed) {
@@ -95,10 +98,16 @@ var game = {
     }
   },
   showHint: function(){
+    if (this.hintCount===1){
     this.hint = this.hiddenWord.charAt(0);
     console.log(this.hint);
     document.getElementById("message").innerHTML =
         "Try " + this.hint.toLocaleUpperCase();
+    this.hintCount--
+    }else if (this.hintCount===0){
+      document.getElementById("message").innerHTML =
+        "Sorry no more hints :(";
+    }
   }
 };
 
