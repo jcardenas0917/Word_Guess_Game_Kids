@@ -71,13 +71,7 @@ var game = {
 
     return false;
   },
-  //starts a new game after pressing new game
-  newGame: function () {
-    var game = confirm("Are you sure you want to start a new game?  You will lose your current score");
-    if (game) {
-      location.reload();
-    }
-  },
+
   // //sets a timer for a new game to start
   time: function () {
     document.getElementById("message").innerHTML = "New Game starting soon...";
@@ -92,15 +86,19 @@ var game = {
   },
   //If the user gives up this is the option to quit the game
   showAnswer: function () {
-    var quit = confirm("Are you sure you want to quit?");
-    if (quit) {
+ (quit) {
       document.getElementById(
         "answer"
-      ).innerHTML = this.hiddenWord.toLocaleUpperCase();
+      ).innerHTML = t    var quit = confirm("Are you sure you want to quit?");
+    ifhis.hiddenWord.toLocaleUpperCase();
       this.guess = 0;
       this.wins = 0;
+      this.hintCount = 5;
       document.getElementById("numofguess").innerHTML = this.guess + " guesses left";
       document.getElementById("numofwins").innerHTML = "Wins " + this.wins;
+      document.getElementById("numofhints").innerHTML = this.hintCount +
+        " hints left";
+      game.time();
     }
   },
   //gives one hint per game until hints are over
@@ -207,11 +205,6 @@ function showAnswer() {
 document.getElementById("showanswer").onclick = function () {
   game.showAnswer();
 };
-//call function newGame
-document.getElementById("reload").onclick = function () {
-  game.newGame();
-};
-
 //call function showHint
 document.getElementById("hint").onclick = function () {
   game.showHint();
