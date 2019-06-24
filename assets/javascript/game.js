@@ -1,5 +1,5 @@
 
-
+//OBJECT
  //crate game object 
 var game = {
   // number of guesses allowed
@@ -27,8 +27,11 @@ var game = {
   wSound: document.getElementById("win"),
   hint: [],
   hintCount:5,
+
+  //OBJECT FUNCTIONS
+  //==================================================================================================================
+  // generates a random word form the randon word array
   startGame: function () {
-    // generates a random word form the randon word array
     document.getElementById("message").innerHTML = " ";
     this.randomNumber = Math.floor(Math.random(this.randomWord) * this.randomWord.length),
       this.hiddenWord = this.randomWord[this.randomNumber];
@@ -42,7 +45,7 @@ var game = {
     this.lettersUsed = [];
     document.getElementById("winner").innerHTML = "";
     document.getElementById("hint").disabled = false;
-    // document.getElementById("hint").disabled = 'false';
+    
   },
   // Checks for invalid key characters pressed
   lettersAllowed: function (allowed) {
@@ -118,7 +121,9 @@ var game = {
   }
 };
 
-//----------------------------------------------------------------------------------------------------------------
+
+//USER INTERACTION
+//===================================================================================================
 document.onkeyup = function (event) {
   var inputLetter = event.key;
   //iterate through hidden word to find matches and add them to the answer replacing the dashes.
