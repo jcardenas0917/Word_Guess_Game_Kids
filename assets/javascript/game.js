@@ -86,11 +86,9 @@ var game = {
   },
   //If the user gives up this is the option to quit the game
   showAnswer: function () {
- (quit) {
-      document.getElementById(
-        "answer"
-      ).innerHTML = t    var quit = confirm("Are you sure you want to quit?");
-    ifhis.hiddenWord.toLocaleUpperCase();
+      var quit = confirm("Are you sure you want to quit?");
+      if (quit) {
+      document.getElementById("answer").innerHTML = this.hiddenWord.toLocaleUpperCase();
       this.guess = 0;
       this.wins = 0;
       this.hintCount = 5;
